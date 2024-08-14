@@ -1,1 +1,38 @@
+#Algoritmo función sucesora con suma y multiplicación
 
+def sucesor(n):
+    return n + 1
+
+def suma(a, b):
+    if b == 0:
+        return a
+    else:
+        return suma(sucesor(a), b - 1)
+
+def multiplicacion(a, b):
+    if b == 0:
+        return 0
+    else:
+        return suma(a, multiplicacion(a, b - 1))
+
+# Solicitar al usuario que elija una operación
+operacion = input("¿Qué operación deseas realizar? (suma/multiplicacion): ").strip().lower()
+
+#strip hace que si se ponen espacios al principios o al final los evite y reconozca "suma" o "multiplicacion"
+#lower hace que si se pone alguna palabra en mayuscula o alguna combinación se ponga en minuscula la seleccion
+
+# Validar la operación y solicitar los números
+if operacion in ["suma", "multiplicacion"]:
+    num1 = int(input(f"Ingrese el primer número para la {operacion}: "))
+    num2 = int(input(f"Ingrese el segundo número para la {operacion}: "))
+
+    # Realizar la operación seleccionada
+    if operacion == "suma":
+        resultado = suma(num1, num2)
+    elif operacion == "multiplicacion":
+        resultado = multiplicacion(num1, num2)
+
+    # Mostrar el resultado
+    print(f"El resultado de la {operacion} de {num1} y {num2} es {resultado}")
+else:
+    print("Operación no válida. Por favor, elige entre 'suma' o 'multiplicacion'.")
