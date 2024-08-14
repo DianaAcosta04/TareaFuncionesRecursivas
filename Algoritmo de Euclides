@@ -1,0 +1,17 @@
+#MCD con el Algoritmo de Euclides
+
+def mcd_euclides(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+# % indica el residuo de la division
+
+# Solicitar al usuario que ingrese dos números
+num1 = int(input("Ingrese el primer número para calcular el MCD: "))
+num2 = int(input("Ingrese el segundo número para calcular el MCD: "))
+
+# Calcular el MCD
+resultado = mcd_euclides(num1, num2)
+
+# Mostrar el resultado
+print(f"El MCD de {num1} y {num2} es {resultado}")
