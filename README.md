@@ -1,5 +1,8 @@
 # TareaFuncionesRecursivas
-Integrantes: Diana Katerine Acosta Viasús
+Integrantes: 
+- Diana Katerine Acosta Viasús
+- Santiago Alejandro Cespedes Daza
+- David Andres Castellanos Angulo 
 
 Este repositorio contiene algoritmos implementados de manera recursiva, estos algoritmos están diseñados para resolver problemas básicos utilizando el lenguaje de programación Python, contiene:
 1. Algorítmo para calcular el factorial de un número n.
